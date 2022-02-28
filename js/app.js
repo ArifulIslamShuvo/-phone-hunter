@@ -1,0 +1,1 @@
+console.log('index and js connected');
