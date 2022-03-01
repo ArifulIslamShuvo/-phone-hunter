@@ -12,9 +12,10 @@
 
 </head>
 
+
 <body>
     <h2 class="text-center text-primary p-3">Take phone</h2>
-    <!-- Error not searching message -->
+    <!-- Error not  searching message -->
     <h6 id="not-search" class="text-center text-danger">please write something to display >!!</h6>
     <!--phone search area -->
     <div class="input-group mb-3 w-50 mx-auto">
@@ -22,6 +23,9 @@
             aria-label="Recipient's username" aria-describedby="button-addon2">
         <button onclick="searchPhone()" class="btn btn-primary" type="button" id="button-search">Search</button>
     </div>
+    <!--search item not found  -->
+    <h6 id="search-notFound" class="text-center text-danger">item is not found >!!</h6>
+
     <!-- phone result -->
     <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 p-5">
     </div>

@@ -18,3 +18,7 @@ background-color: rgb(224, 224, 224);
 #not-search{
     display: none;
 }
+/* search item not found */
+#search-notFound{
+    display: none;
+}
