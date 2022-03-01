@@ -1,0 +1,20 @@
+body{
+background-color: rgb(224, 224, 224);
+}
+
+/* display search result */
+.card{
+    background-color: #0d6dfdd3;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+/* display-image */
+.phone-card img{
+    height: 400px;
+    padding: 20px;
+    border-radius: 30px;
+}
+/* Error not searching message */
+#not-search{
+    display: none;
+}
