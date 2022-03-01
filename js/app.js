@@ -71,17 +71,38 @@ const displayPhoneDetail = detail => {
     const phoneDtail = document.getElementById('phone-dtail');
     phoneDtail.textContent = '';
     const div = document.createElement('div');
-            div.classList.add('phone-card');
+    div.classList.add('phone-card');
 
-            div.innerHTML = `
-              <div" class="card h-100">
+    // Finding release date 
+    let releaseDate;
+    if (detail.releaseDate === '') {
+        releaseDate = 'Release date not found';
+    }
+    else {
+        releaseDate = detail.releaseDate;
+    }
+    div.innerHTML = `
+                  <div" class="card h-100">
                     <img src="${detail.image}" class="p-3 card-img-top" alt="...">
                     <div class="card-body">
                         <h5>${detail.name}</h5>
-                        <h6>${detail.releaseDate}</h6>
+                        <h6>${releaseDate}</h6>
+                        <p><h6>chipSet:</h5> ${detail.mainFeatures.chipSet}
+                        <h6>memory:</h6> ${detail.mainFeatures.memory}
+                        <h6>storage:</h6> ${detail.mainFeatures.storage}
+                        <h6>displaySize:</h6> ${detail.mainFeatures.displaySize}
+                        <h6>sensors:</h6> ${detail.mainFeatures.sensors[0]}, ${detail.mainFeatures.sensors[1]}, ${detail.mainFeatures.sensors[2]}, ${detail.mainFeatures.sensors[3]}, ${detail.mainFeatures.sensors[4]}, ${detail.mainFeatures.sensors[5]},${detail.mainFeatures.sensors[6]}
+                        <h6>Bluetooth:</h6> ${detail?.others?.Bluetooth}
+                        <h6>GPS:</h6> ${detail?.others?.GPS}
+                        <h6>NFC:</h6> ${detail?.others?.NFC}
+                        <h6>Radio:</h6> ${detail?.others?.Radio}
+                        <h6>USB:</h6> ${detail?.others?.USB}
+                        <h6>WLAN:</h6> ${detail?.others?.WLAN}
+
+                        </p>
                     </div>
                </div>
              `
-            phoneDtail.append(div);
+    phoneDtail.append(div);
 
 }
