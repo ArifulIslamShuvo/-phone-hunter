@@ -4,10 +4,8 @@ background-color: rgba(243, 217, 168, 0.178);
 
 /* display search result */
 .card{
-    /* background-color: #000000b6; */
     background-color: rgba(156, 243, 202, 0.137);
     border-radius: 10px;
-    /* color: whitesmoke; */
 }
 /* display-image */
 .phone-card img{
