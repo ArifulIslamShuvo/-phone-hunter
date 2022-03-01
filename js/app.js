@@ -3,7 +3,12 @@
 const searchPhone = async () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    searchField.value = ''
+    searchField.value = '';
+
+    // phone detail none
+    const phoneDtail = document.getElementById('phone-dtail');
+    phoneDtail.textContent = '';
+
     if (searchText == '') {
         // Error not searching message
         document.getElementById('not-search').style.display = "block";
@@ -60,3 +65,23 @@ const loadPhoneDetail = async phoneId => {
     displayPhoneDetail(data.data);
 };
 
+// display phone detail
+const displayPhoneDetail = detail => {
+    console.log(detail);
+    const phoneDtail = document.getElementById('phone-dtail');
+    phoneDtail.textContent = '';
+    const div = document.createElement('div');
+            div.classList.add('phone-card');
+
+            div.innerHTML = `
+              <div" class="card h-100">
+                    <img src="${detail.image}" class="p-3 card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>${detail.name}</h5>
+                        <h6>${detail.releaseDate}</h6>
+                    </div>
+               </div>
+             `
+            phoneDtail.append(div);
+
+}
