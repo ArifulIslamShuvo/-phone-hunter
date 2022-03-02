@@ -9,7 +9,8 @@ background-color: rgba(243, 217, 168, 0.178);
 }
 /* display-image */
 .phone-card img{
-    height: 400px;
+    height: 380px;
+    width: 300px;
     padding: 20px;
     border-radius: 30px;
 }

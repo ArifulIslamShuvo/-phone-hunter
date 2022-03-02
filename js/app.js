@@ -44,11 +44,13 @@ const displaySearchResult = phones => {
             div.classList.add('phone-card')
             div.innerHTML = `
               <div" class="card h-100">
-                    <img src="${phone.image}" class="p-3 card-img-top" alt="...">
-                    <div class="card-body">
+                <div class="d-flex justify-content-center">
+                <img src="${phone.image}" class="p-3 card-img-top" alt="...">
+                </div>
+                 <div class="card-body">
                         <h5>${phone.phone_name}</h5>
                         <h4>${phone.brand}</h4>
-                    </div>
+                 </div>
                     <button onclick="loadPhoneDetail('${phone.slug}')" class="btn btn-primary p-2">Details</button>
                     
                </div>
@@ -84,7 +86,9 @@ const displayPhoneDetail = detail => {
     }
     div.innerHTML = `
                   <div" class="card h-100">
-                    <img src="${detail.image}" class="p-3 card-img-top" alt="...">
+                  <div class="d-flex justify-content-center">
+                  <img src="${detail.image}" class="p-3 card-img-top" alt="...">
+                </div>
                     <div class="card-body">
                         <h5>${detail.name}</h5>
                         <h6>${releaseDate}</h6>
