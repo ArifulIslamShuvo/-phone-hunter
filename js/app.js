@@ -21,7 +21,7 @@ const searchPhone = async () => {
         const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
         const res = await fetch(url);
         const data = await res.json();
-        
+        //first twenty item
         displaySearchResult(data.data.slice(0, 20));
         document.getElementById('not-search').style.display = "none";
     }
@@ -70,7 +70,7 @@ const loadPhoneDetail = async phoneId => {
 const displayPhoneDetail = detail => {
     // console.log(detail);
     const phoneDtail = document.getElementById('phone-dtail');
-    phoneDtail.textContent = '';
+    // phoneDtail.textContent = '';
     const div = document.createElement('div');
     div.classList.add('phone-card');
 
